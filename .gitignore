@@ -1,0 +1,11 @@
+data/
+venv/
+.venv/
+.env
+openlibrary-search/
+enrichment_log/
+results/
+dump/
+google_books_cache.db
+google_books_cache_v3.db
+saved_model/
