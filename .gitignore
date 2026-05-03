@@ -5,6 +5,7 @@ venv/
 openlibrary-search/
 enrichment_log/
 results/
+results_v2/
 dump/
 google_books_cache.db
 google_books_cache_v3.db
