@@ -4,7 +4,7 @@ export default function Sidebar({ currentPage, setCurrentPage, npm, handleLogout
   const navItems = [
     { id: 'landing', label: '🏠 Beranda' },
     { id: 'search', label: '🔍 Pencarian Semantik' },
-    { id: 'config', label: '⚙️ Konfigurasi' },
+    // { id: 'config', label: '⚙️ Konfigurasi' },
   ];
 
   return (

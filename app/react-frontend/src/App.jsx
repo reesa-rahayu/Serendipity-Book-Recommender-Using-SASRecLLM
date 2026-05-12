@@ -3,7 +3,7 @@ import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import ColdStartForm from './pages/ColdStartForm';
 import SearchPage from './pages/SearchPage';
-import ConfigPage from './pages/ConfigPage';
+// import ConfigPage from './pages/ConfigPage';
 import BookDetailPage from './pages/BookDetailPage';
 import Sidebar from './components/Sidebar';
 
@@ -95,7 +95,7 @@ export default function App() {
           <SearchPage onBookSelect={(book) => handleBookSelect(book, 'search')} />
         )}
         
-        {currentPage === 'config' && <ConfigPage />}
+        {/* {currentPage === 'config' && <ConfigPage />} */}
         
         {currentPage === 'book_detail' && (
           <BookDetailPage book={selectedBook} onBack={goBack} />
