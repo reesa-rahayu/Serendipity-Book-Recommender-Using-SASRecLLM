@@ -137,6 +137,12 @@ export default function Dashboard({ npm, userType, userInfo, setUserInfo, initia
                 ${userType === 'warm' ? 'bg-yellow-100 text-yellow-800' : 'bg-blue-100 text-blue-800'}`}>
                 {userType} Start
               </span>
+              {userType === 'cold' && recs.source && (
+                <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide
+                  ${recs.source === 'cold_faiss' ? 'bg-purple-100 text-purple-800' : 'bg-green-100 text-green-800'}`}>
+                  {recs.source === 'cold_faiss' ? 'Similarity Based' : 'Demographic Based'}
+                </span>
+              )}
             </div>
             <div className="flex items-center gap-3">
               <label className="text-xs font-semibold text-gray-500 uppercase">Jumlah</label>
@@ -149,6 +155,24 @@ export default function Dashboard({ npm, userType, userInfo, setUserInfo, initia
               />
             </div>
           </div>
+          
+          {userType === 'cold' && userInfo?.chosen_books && userInfo.chosen_books.length > 0 && (
+            <div className="mb-6 bg-gray-50 p-4 rounded-xl border border-gray-200">
+              <h4 className="text-sm font-bold mb-3 text-gray-700">Buku yang Anda Pilih:</h4>
+              <div className="flex flex-wrap gap-2">
+                {userInfo.chosen_books.map((b, i) => (
+                  <button 
+                    key={i}
+                    onClick={() => onBookSelect(b)}
+                    className="text-left bg-white border border-gray-200 px-3 py-2 rounded-lg hover:border-black transition-colors max-w-xs"
+                  >
+                    <p className="text-xs font-semibold text-gray-900 line-clamp-1">{b.judul_buku}</p>
+                    <p className="text-[10px] text-gray-500 line-clamp-1">{b.penulis}</p>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           
           {loadingRecs ? (
             <div className="text-center py-12 text-gray-400">Memuat rekomendasi...</div>

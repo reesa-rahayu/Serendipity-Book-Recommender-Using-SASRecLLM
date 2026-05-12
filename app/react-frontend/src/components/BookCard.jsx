@@ -45,6 +45,12 @@ export default function BookCard({ book, onClickDetail }) {
           {book.penulis || "Penulis tidak diketahui"}
         </p>
         
+        {book.tanggal_pinjam && (
+          <p className="text-[10px] text-gray-400 mb-2 mt-[-8px]">
+            Dipinjam: {new Date(book.tanggal_pinjam).toLocaleString('id-ID', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+          </p>
+        )}
+        
         {/* Detail Button (Pushed to bottom) */}
         <div className="mt-auto pt-2 border-t border-gray-50">
           <button 

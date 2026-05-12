@@ -75,12 +75,23 @@ export default function ColdStartForm({ npm, onComplete }) {
       
       if (res.ok) {
         const data = await res.json();
+        
+        const chosenBooks = [];
+        for (const bookList of Object.values(clusters)) {
+          for (const b of bookList) {
+            if (selectedBooks.has(b.book_id) && !chosenBooks.find(cb => cb.book_id === b.book_id)) {
+              chosenBooks.push(b);
+            }
+          }
+        }
+        
         onComplete({
           nama: nama || 'Pengguna Baru',
           fakultas,
           jurusan,
           jenjang,
-          role: 'mahasiswa'
+          role: 'mahasiswa',
+          chosen_books: chosenBooks
         }, data);
       } else {
         alert("Gagal mendapatkan rekomendasi.");
