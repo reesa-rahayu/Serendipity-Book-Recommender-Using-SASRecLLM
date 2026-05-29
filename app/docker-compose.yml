@@ -1,0 +1,20 @@
+services:
+  librec:
+    build: .
+    container_name: librec-app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      # Mount data externally to avoid baking into image (optional)
+      # Uncomment these lines to use external data instead of COPY in Dockerfile:
+      # - ./data:/app/data
+      # - ./saved_model:/app/saved_model
+      # - ./results_v2:/app/results_v2
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

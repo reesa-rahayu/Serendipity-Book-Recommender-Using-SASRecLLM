@@ -1,0 +1,32 @@
+# Git
+.git
+.gitignore
+
+# Node development files (we only need the built dist/)
+react-frontend/node_modules
+react-frontend/src
+react-frontend/public
+react-frontend/*.config.js
+react-frontend/package*.json
+react-frontend/.gitignore
+react-frontend/README.md
+
+# Python caches
+__pycache__
+*.pyc
+*.pyo
+.venv
+venv
+
+# Scripts (not needed in container)
+scripts/
+
+# Environment (injected at runtime)
+.env
+.env.example
+
+# IDE & OS
+.vscode
+.idea
+.DS_Store
+Thumbs.db

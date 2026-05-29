@@ -10,7 +10,7 @@ import faiss
 from pathlib import Path
 
 # ── paths (relative to project root, called from app/backend/) ──────────────
-ROOT = Path(__file__).resolve().parents[3]   # project-code/
+ROOT = Path(__file__).resolve().parents[2]   # app/
 DATA_DIR = ROOT / "data"
 MODEL_DIR = ROOT / "saved_model"
 BOOKS_CSV  = DATA_DIR / "processed" / "books_enriched_with_type.csv"

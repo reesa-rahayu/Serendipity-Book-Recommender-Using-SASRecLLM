@@ -1,2 +1,25 @@
+# Environment
 .env
-/_pycache
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Node
+react-frontend/node_modules/
+
+# Data & model files (too large for Git — use Git LFS or download script)
+data/
+saved_model/
+results_v2/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

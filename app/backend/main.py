@@ -298,7 +298,7 @@ def update_config(req: ConfigRequest):
 def get_eval_metrics():
     import pandas as pd
     import json
-    eval_csv = Path(__file__).parent.parent.parent / "results_v2" / "evaluation_metrics_l_2_h_1_hd_1024_trainable_True_lr_0.0001.csv"
+    eval_csv = Path(__file__).parent.parent / "results_v2" / "evaluation_metrics_l_2_h_1_hd_1024_trainable_True_lr_0.0001.csv"
     if not eval_csv.exists():
         raise HTTPException(status_code=404, detail="Eval metrics not found")
     
@@ -315,7 +315,7 @@ def get_eval_metrics():
 def get_eval_models():
     """Return distinct model names available in the evaluation CSV."""
     import pandas as pd
-    eval_csv = Path(__file__).parent.parent.parent / "results_v2" / "evaluation_metrics_l_2_h_1_hd_1024_trainable_True_lr_0.0001.csv"
+    eval_csv = Path(__file__).parent.parent / "results_v2" / "evaluation_metrics_l_2_h_1_hd_1024_trainable_True_lr_0.0001.csv"
     if not eval_csv.exists():
         raise HTTPException(status_code=404, detail="Eval metrics not found")
     try:
