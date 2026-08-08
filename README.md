@@ -117,7 +117,7 @@ The effectiveness of our model is evaluated across different user segments to ac
   <em>Figure 1: Comparison of serendipity metrics across embedding strategies.</em>
 </p>
 <p align="center">
-  <img src="public_results/plots/trade_off_analysis" width="700" alt="Trade-off Analysis Plot">
+  <img src="public_results/plots/trade_off_analysis.png" width="700" alt="Trade-off Analysis Plot">
   <br>
   <em>Figure 2: Balance Analysis of serendipity and accuracy</em>
 </p>
