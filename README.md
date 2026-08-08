@@ -83,6 +83,19 @@ serendipitous-book-recommender/
 
 ---
 
+## 📂 Dataset Statistics
+
+The system utilizes transaction logs from the **UPNVJT Library**. The dataset undergoes a rigorous cleaning and sequence-filtering pipeline (removing inactive users, handling sparse items, and structuring user interaction chronologically) before being fed into the sequential recommender.
+
+| Metric | Raw Dataset | Processed Dataset (Modeling) |
+| :--- | :---: | :---: |
+| **Total Transactions / Logs** | *[~5.445]* | *[~5.440]* |
+| **Unique Users** | *[1798]* | *[1798]* |
+| **Unique Books / Items** | *[~55.000]* | *[~14.000]* |
+| **Average Interactions per User** | *[2,98]* | *[2,98]* |
+
+---
+
 ## 📊 Key Results
 The effectiveness of our model is evaluated across different user segments to account for the **Cold Start** problem, measuring performance on new users (Cold), returning users (Warm), and the entire dataset (All).
 
